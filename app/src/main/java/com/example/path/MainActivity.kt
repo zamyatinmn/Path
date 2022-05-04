@@ -62,6 +62,8 @@ fun Track() {
             val second = if (i > 0) points[(i - 1)] else defaultOffset
             speed = sqrt((second.x - first.x).pow(2) + (second.y - first.y).pow(2))
             points[i]
+        } else if (i != 0 && i == points.size) {
+            points[i - 1]
         } else {
             defaultOffset
         },
